@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Current Price
+{% endblock %}
+
+{% block main %}
+    <p>
+        <h1>
+            The current price of {{ price["symbol"] }} is {{ price_usd }}
+        </h1>
+    </p>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table class="table table-sm">
+        <thead>
+            <th>
+                Name
+            </th>
+            <th>
+                Quantity
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Time
+            </th>
+            <th>
+                Transaction
+            </th>
+        </thead>
+
+        <tbody>
+
+            {% for i in range(length_info) %}
+                <tr>
+                    <td>
+                        {{ name[i] }}
+                    </td>
+
+                    <td>
+                        {{ quantity[i] }}
+                    </td>
+
+                    <td>
+                        ${{ price[i] }}
+                    </td>
+
+                    <td>
+                        {{ time[i] }}
+                    </td>
+
+                    <td>
+                        {{ transaction[i] }}
+                    </td>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+
+{% endblock %}

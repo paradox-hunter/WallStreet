@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <table class="table table-sm">
+        <thead>
+            <th>
+                Name
+            </th>
+            <th>
+                Quantity
+            </th>
+            <th>
+                Current Price
+            </th>
+            <th>
+                Value
+            </th>
+        </thead>
+
+        <tbody>
+
+            {% for i in range(length_names) %}
+                 <tr>
+                    <td>
+                        {{ names[i] }}
+                    </td>
+
+                    <td>
+                        {{ quantity[i] }}
+                    </td>
+
+                    <td>
+                        {{ price[i] | usd }}
+                    </td>
+
+                    <td>
+                        {{ stock_value[i] | usd }}
+                    </td>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+
+    <br>
+    <p>
+        <h3>
+            Your current balance is {{ cur_cash_num | usd }} and your total assets are equal to {{ total | usd }}
+        </h3>
+    </p>
+{% endblock %}
