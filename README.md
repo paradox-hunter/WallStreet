@@ -1,7 +1,6 @@
-# Project Title
+# Wall Street
 
-One Paragraph of project description goes here
-
+This project is a web app that simulates a stock trading experience for the user. It uses real time stock tickers and prices from the AlphaVantage databases.
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
